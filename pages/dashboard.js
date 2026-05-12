@@ -43,6 +43,26 @@ export default function Dashboard() {
     setTimeout(() => { setSuccess(''); setError(''); }, 3000);
   };
 
+  const getWaLink = (entry) => {
+    const kota = entry.kotaKab || '';
+    const cleanWa = (entry.nomorWa || '').replace(/[^0-9]/g, '');
+    const text = `Setiap hari, ada puluhan orang di ${kota} yang mencari "service AC ${kota}" di Google. Yang muncul pertama? Yang punya website sendiri.
+
+Pertanyaannya: dari sekian banyak yang cari AC di ${kota}, apakah sudah ada yang menemukan jasa Bapak/Ibu? 🤔
+
+Faktanya — bisnis AC yang punya website sendiri rata-rata bisa mendapatkan 3-5 service order per hari. Bukan janji. Ini data dari mitra kami.
+
+Kami siap membuatkan website profesional untuk bisnis AC Bapak/Ibu — punya domain sendiri:
+🌐 Halaman profil + portofolio
+📍 Terindex Google — orang ${kota} gampang menemukan
+📱 Tombol WA — 1 klik langsung chat ke HP Bapak/Ibu
+
+Tertarik? Kami menyediakan jasa pembuatan websitenya.
+
+Balas "MAU" ya, nanti kami kirim contoh website + paketnya. 🚀`;
+    return `https://wa.me/${cleanWa}?text=${encodeURIComponent(text)}`;
+  };
+
   const handleAdd = async (e) => {
     e.preventDefault();
     try {
@@ -295,7 +315,7 @@ export default function Dashboard() {
                       </td>
                       <td className="px-3 py-2.5 text-xs text-gray-300">{entry.contactPerson || '—'}</td>
                       <td className="px-3 py-2.5">
-                        <a href={`https://wa.me/${entry.nomorWa.replace(/[^0-9]/g, '')}`} target="_blank" className="text-xs text-emerald-400 hover:text-emerald-300 transition">
+                        <a href={getWaLink(entry)} target="_blank" className="text-xs text-emerald-400 hover:text-emerald-300 transition">
                           {entry.nomorWa}
                         </a>
                       </td>
