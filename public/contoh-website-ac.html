@@ -33,7 +33,7 @@
         <a href="#gallery" class="hover:text-amber-400 transition">Portofolio</a>
         <a href="#contact" class="hover:text-amber-400 transition">Kontak</a>
       </div>
-      <a href="https://wa.me/6281239045529?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
+      <a href="https://wa.me/6287857377867?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
          class="bg-emerald-500 hover:bg-emerald-400 text-white text-xs font-bold px-4 py-2 rounded-xl transition flex items-center gap-1.5 wa-pulse">
         <span>💬</span> WA Sekarang
       </a>
@@ -59,7 +59,7 @@
             Teknisi berpengalaman, harga bersahabat.
           </p>
           <div class="flex flex-wrap gap-3">
-            <a href="https://wa.me/6281239045529?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
+            <a href="https://wa.me/6287857377867?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
                class="bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-6 py-3.5 rounded-xl transition text-sm flex items-center gap-2 glow-amber">
               📱 Konsultasi Gratis
             </a>
@@ -347,6 +347,55 @@
     </div>
   </section>
 
+  <!-- FORM ORDER -->
+  <section id="order" class="py-20 md:py-28 bg-[#0c0c18]">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="text-[10px] font-semibold tracking-[0.2em] text-amber-400 uppercase">Pesan Sekarang</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-3">Isi Form Pemesanan</h2>
+        <p class="text-gray-400 text-sm mt-3">Langsung terkirim ke WhatsApp tim kami.</p>
+      </div>
+      <form id="waForm" onsubmit="submitWaForm(event)" class="bg-white/[0.02] border border-white/10 rounded-3xl p-6 md:p-8 space-y-5">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-[10px] text-gray-400 mb-1.5 font-semibold tracking-wide uppercase">Nama Lengkap *</label>
+            <input type="text" id="formNama" required placeholder="Masukkan nama Anda"
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-500/50 transition" />
+          </div>
+          <div>
+            <label class="block text-[10px] text-gray-400 mb-1.5 font-semibold tracking-wide uppercase">Alamat *</label>
+            <input type="text" id="formAlamat" required placeholder="Contoh: Perumahan XXX, Sleman"
+              class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-500/50 transition" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-[10px] text-gray-400 mb-1.5 font-semibold tracking-wide uppercase">Jenis Layanan *</label>
+          <select id="formLayanan" required
+            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-amber-500/50 transition">
+            <option value="" disabled selected>— Pilih Layanan —</option>
+            <option value="Cuci AC">🧊 Cuci AC</option>
+            <option value="Isi Freon">💨 Isi Freon</option>
+            <option value="Service / Perbaikan AC">🔧 Service / Perbaikan AC</option>
+            <option value="Pasang AC Baru">📦 Pasang AC Baru</option>
+            <option value="Bongkar Pasang AC">🔄 Bongkar Pasang AC</option>
+            <option value="Konsultasi AC">📋 Konsultasi AC</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[10px] text-gray-400 mb-1.5 font-semibold tracking-wide uppercase">Keterangan Lebih Lanjut</label>
+          <textarea id="formKeterangan" rows="4" placeholder="Jelaskan masalah AC Anda atau kebutuhan lainnya..."
+            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-amber-500/50 transition resize-none"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-emerald-500 hover:bg-emerald-400 text-gray-950 font-bold py-3.5 rounded-xl transition text-sm flex items-center justify-center gap-2 wa-pulse">
+          <span>📱</span> Kirim ke WhatsApp
+        </button>
+        <p class="text-[10px] text-gray-500 text-center">Data Anda aman dan hanya digunakan untuk kebutuhan pemesanan.</p>
+      </form>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="py-20 md:py-28 bg-[#0c0c18]">
     <div class="max-w-3xl mx-auto px-4">
@@ -387,12 +436,12 @@
       <p class="text-gray-400 text-sm max-w-lg mx-auto mb-8">
         Klik tombol di bawah untuk chat langsung dengan tim kami. Gratis konsultasi, tanpa biaya survey!
       </p>
-      <a href="https://wa.me/6281239045529?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
+      <a href="https://wa.me/6287857377867?text=Halo%20Mandiri%20Teknik%20AC%2C%20saya%20mau%20konsultasi%20service%20AC" target="_blank"
          class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-white font-bold px-8 py-4 rounded-xl transition text-sm glow-amber wa-pulse">
         <span class="text-lg">📱</span> Chat WhatsApp Sekarang
       </a>
       <div class="mt-6 text-[10px] text-gray-500">
-        Atau hubungi: 0812-3904-5529  |  Respon cepat & ramah
+        Atau hubungi: 6287-8573-77867  |  Respon cepat & ramah
       </div>
     </div>
   </section>
@@ -409,10 +458,32 @@
       </div>
       <div class="flex items-center gap-3 text-xs text-gray-500">
         <span>🏠 Sleman</span>
-        <span>📱 0812-3904-5529</span>
+        <span>📱 6287-8573-77867</span>
       </div>
     </div>
   </footer>
 
+  <script>
+    function submitWaForm(event) {
+      event.preventDefault();
+      
+      const nama = document.getElementById('formNama').value.trim();
+      const alamat = document.getElementById('formAlamat').value.trim();
+      const layanan = document.getElementById('formLayanan').value;
+      const keterangan = document.getElementById('formKeterangan').value.trim();
+      
+      const pesan = `Halo Mandiri Teknik AC, saya ingin pesan layanan:
+
+📌 *Nama:* ${nama}
+📍 *Alamat:* ${alamat}
+🔧 *Layanan:* ${layanan}
+📝 *Keterangan:* ${keterangan || '-'}
+
+Mohon infonya, terima kasih.`;
+      
+      const waUrl = `https://wa.me/6287857377867?text=${encodeURIComponent(pesan)}`;
+      window.open(waUrl, '_blank');
+    }
+  </script>
 </body>
 </html>
