@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jasa-ac-crm-tduw.vercel.app/sitemap.xml
